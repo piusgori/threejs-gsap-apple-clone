@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist",
+    "site": "pius-apple-clone",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
