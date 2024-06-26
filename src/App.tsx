@@ -1,10 +1,15 @@
+import Features from "./components/features";
+import Footer from "./components/footer";
 import Hero from "./components/hero"
 import Highlights from "./components/highlights"
+import HowItWorks from "./components/how-it-works";
 import Model from "./components/model"
 import Navbar from "./components/navbar"
-
+import * as Sentry from '@sentry/react';
 
 function App() {
+
+  // return <button onClick={() => methodDoesNotExist()}>Break the world</button>;
 
   return (
     <main className="bg-black">
@@ -12,8 +17,11 @@ function App() {
       <Hero />
       <Highlights />
       <Model />
+      <Features />
+      <HowItWorks />
+      <Footer />
     </main>
   )
 }
 
-export default App
+export default Sentry.withProfiler(App)
